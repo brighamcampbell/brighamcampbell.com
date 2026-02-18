@@ -1,6 +1,6 @@
 {{- define "body" }}
 <div class="title">
-    <h1>{{ .Title | title }}</h1>
+    <h1>{{ .Title }}</h1>
     <p class="subheader">{{ .Date | time.Format ":date_long" }} from <a href="/">{{ site.Title }}</a></p>
 </div>
 

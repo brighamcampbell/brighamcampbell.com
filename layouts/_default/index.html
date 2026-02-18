@@ -27,7 +27,7 @@
     {{- range where site.RegularPages "Type" "notes" }}
         <div class="article-card">
             <p class="subheader">{{ .Date | time.Format ":date_long" }}</p>
-            <a href="{{ .RelPermalink }}">{{ .Title | title }}</a>
+            <a href="{{ .RelPermalink }}">{{ .Title }}</a>
         </div>
     {{- end }}
 {{- end }}

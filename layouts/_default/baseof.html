@@ -6,7 +6,7 @@
 	{{ with .OutputFormats.Get "rss" }}
 	    {{ printf `<link rel=%q type=%q href=%q title=%q>` .Rel .MediaType.Type .Permalink site.Title | safeHTML }}
 	{{ end }}
-        <title>{{ .Title | title }}</title>
+        <title>{{ .Title }}</title>
         {{  with resources.Get "main.scss.template" | resources.ExecuteAsTemplate "main.scss" . | css.Sass | resources.Minify }}
         <style>
             {{ .Content | safeCSS }}
@@ -16,7 +16,7 @@
     <body>
         {{- block "body" . }}
         <div class="title">
-            <h1>{{ .Title | title }}</h1>
+            <h1>{{ .Title }}</h1>
         </div>
         {{- block "main" . }}
             <main>
