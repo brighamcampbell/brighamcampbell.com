@@ -93,7 +93,7 @@ cleanup:
 
 By the way, you may have heard that `goto` is tautologically bad. In this
 particular case, it is perhaps a little overkill, but not inappropriate. Stack
-unwinding is a benevolent use of `goto`.
+unwinding is a benign use of `goto`.
 
 [^1]: See my thoughts on using system() to implement logic from low-level
     programming languages [here](/notes/exec-code-smell/)
